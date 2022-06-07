@@ -2,6 +2,7 @@ package com.anurag.springboot.TodoApplication.DAOImpl;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
@@ -12,6 +13,7 @@ import com.anurag.springboot.TodoApplication.model.Todo;
 @Component("todoDao")
 public class TodoDAOImpl implements TodoDAO {
 
+    @Autowired
     private JdbcTemplate jdbcTemplate;
 
     @Override
