@@ -37,7 +37,7 @@
                     <tr>
                         <td>${todo.id}</td>
                         <td>${todo.description}</td>
-                        <td>${todo.targetDate}</td>
+                        <td><fmt:formatDate pattern="dd/MM/yyyy" value="${todo.targetDate}" /></td>
                         <td>${todo.done}</td>
                         <td><a href="/update-todo?id=${todo.id}" class="btn btn-info">Update</a></td>
                         <td><a href="/delete-todo?id=${todo.id}" class="btn btn-danger">Delete</a></td>
