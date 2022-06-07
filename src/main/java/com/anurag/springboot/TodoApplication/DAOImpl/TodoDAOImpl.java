@@ -18,14 +18,14 @@ public class TodoDAOImpl implements TodoDAO {
 
     @Override
     public int create(Todo todo) {
-        String sql = "INSERT INTO Todos (description, targetDate, isDone) values (?, ?, ?)";
+        String sql = "INSERT INTO Todos (desc, targetDate, isDone) values (?, ?, ?)";
         int create = jdbcTemplate.update(sql, todo.getDesc(), todo.getTargetDate(), todo.isDone());
         return create;
     }
 
     @Override
     public int update(Todo todo) {
-        String sql = "UPDATE Todos SET description = ?, targetDate = ?, isDone = ? WHERE id = ?";
+        String sql = "UPDATE Todos SET desc = ?, targetDate = ?, isDone = ? WHERE id = ?";
         int update = jdbcTemplate.update(sql, todo.getDesc(), todo.getTargetDate(), todo.isDone(), todo.getId());
         return update;
     }
