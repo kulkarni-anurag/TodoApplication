@@ -36,16 +36,16 @@
                 <c:forEach items="${todos}" var="todo">
                     <tr>
                         <td>${todo.id}</td>
-                        <td>${todo.desc}</td>
+                        <td>${todo.description}</td>
                         <td>${todo.targetDate}</td>
                         <td>${todo.done}</td>
-                        <td><a href="/updatetodo?id=${todo.id}" class="btn btn-info">Update</a></td>
-                        <td><a href="/deletetodo?id=${todo.id}" class="btn btn-danger">Delete</a></td>
+                        <td><a href="/update-todo?id=${todo.id}" class="btn btn-info">Update</a></td>
+                        <td><a href="/delete-todo?id=${todo.id}" class="btn btn-danger">Delete</a></td>
                     </tr>
                 </c:forEach>
             </tbody>
         </table>
-        <a href="/addtodo" class="btn btn-primary">Add Todo</a>
+        <a href="/add-todo" class="btn btn-primary">Add Todo</a>
         <br />
         <br />
     </div>

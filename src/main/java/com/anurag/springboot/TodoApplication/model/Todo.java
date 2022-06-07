@@ -4,17 +4,17 @@ import java.util.Date;
 
 public class Todo {
     private int id;
-    private String desc;
+    private String description;
     private Date targetDate;
     private boolean isDone;
 
     public Todo() {
         super();
     }
-    public Todo(int id, String desc, Date targetDate, boolean isDone) {
+    public Todo(int id, String description, Date targetDate, boolean isDone) {
         super();
         this.id = id;
-        this.desc = desc;
+        this.description = description;
         this.targetDate = targetDate;
         this.isDone = isDone;
     }
@@ -27,12 +27,12 @@ public class Todo {
         this.id = id;
     }
 
-    public String getDesc() {
-        return desc;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public Date getTargetDate() {
@@ -53,6 +53,6 @@ public class Todo {
 
     @Override
     public String toString() {
-        return "Todo [id=" + id + ", desc=" + desc + ", targetDate=" + targetDate + ", isDone=" + isDone + "]";
+        return "Todo [id=" + id + ", description=" + description + ", targetDate=" + targetDate + ", isDone=" + isDone + "]";
     }
 }

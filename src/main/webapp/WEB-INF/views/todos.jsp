@@ -26,12 +26,12 @@
                             <form:hidden path="id" />
                         </div>
                         <div class="form-group">
-                            <form:label path="desc">Enter Todo Description:</form:label>
-                            <form:textarea path="desc" class="form-control" required="true"></form:textarea>
-                            <form:errors path="desc" cssClass="text-danger" />
+                            <form:label path="description">Enter Todo Description:</form:label>
+                            <form:textarea path="description" class="form-control" required="true" placeholder="Enter Description"></form:textarea>
+                            <form:errors path="description" cssClass="text-danger" />
                         </div>
                         <div class="form-group">
-                            <form:input type="text" path="targetDate" class="form-control" id="targetDate" />
+                            <form:input type="text" path="targetDate" class="form-control" id="targetDate" required="true" placeholder="Select Date" />
                             <form:errors path="targetDate" cssClass="text-warning" />
                         </div>
                         <div class="form-group">
