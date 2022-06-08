@@ -16,6 +16,8 @@
     <div class="container">
         <h2 class="text-center mt-5">Welcome to Todo Application</h2>
         <br />
+        <h5>Hey there! ${username}</h5>
+        <br />
         <a href="/list-todos">Manage your todos</a>
     </div>
 </body>
