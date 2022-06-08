@@ -27,8 +27,6 @@
                     <th>Todo Id</th>
                     <th>Description</th>
                     <th>Target Date</th>
-                    <th>isDone</th>
-                    <th>Action</th>
                     <th>Update</th>
                     <th>Delete</th>
                 </tr>
@@ -39,15 +37,6 @@
                         <td>${todo.id}</td>
                         <td>${todo.description}</td>
                         <td><fmt:formatDate pattern="dd/MM/yyyy" value="${todo.targetDate}" /></td>
-                        <td>${todo.done}</td>
-                        <td>
-                            <c:if test="${todo.done == false}">
-                                <a href="/complete-todo?id=${todo.id}" class="btn btn-success">Mark Completed</a>
-                            </c:if>
-                            <c:if test="${todo.done == true}">
-                                <a href="/incomplete-todo?id=${todo.id}" class="btn btn-warning">Mark Incomplete</a>
-                            </c:if>
-                        </td>
                         <td><a href="/update-todo?id=${todo.id}" class="btn btn-info">Update</a></td>
                         <td><a href="/delete-todo?id=${todo.id}" class="btn btn-danger">Delete</a></td>
                     </tr>
