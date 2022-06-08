@@ -19,6 +19,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.anurag.springboot.TodoApplication.model.Todo;
 import com.anurag.springboot.TodoApplication.service.TodoService;
 
+import jakarta.validation.Valid;
+
 @Controller
 public class TodoController {
 
@@ -45,7 +47,7 @@ public class TodoController {
     }
 
     @PostMapping(value = "/add-todo")
-    public String handleAddTodo(@ModelAttribute("todo") Todo todo, BindingResult result){
+    public String handleAddTodo(@Valid @ModelAttribute("todo") Todo todo, BindingResult result){
         if(result.hasErrors()){
             return "todos";
         }
@@ -61,7 +63,7 @@ public class TodoController {
     }
 
     @PostMapping(value = "/update-todo")
-    public String handleUpdateTodo(@ModelAttribute("todo") Todo todo, BindingResult result){
+    public String handleUpdateTodo(@Valid @ModelAttribute("todo") Todo todo, BindingResult result){
         if(result.hasErrors()){
             return "todos";
         }

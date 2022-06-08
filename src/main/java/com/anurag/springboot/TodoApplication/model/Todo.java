@@ -2,8 +2,14 @@ package com.anurag.springboot.TodoApplication.model;
 
 import java.util.Date;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+
 public class Todo {
     private int id;
+
+    @NotBlank(message = "Description is required")
+    @Size(min = 10, message = "Description should be at least 10 characters")
     private String description;
     private Date targetDate;
     private boolean isDone;
