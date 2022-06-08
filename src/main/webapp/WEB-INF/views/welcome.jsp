@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,9 +15,9 @@
 <body>
     <%@ include file="common/navbar.jspf" %>
     <div class="container">
-        <h2 class="text-center mt-5">Welcome to Todo Application</h2>
+        <h2 class="text-center mt-5"><spring:message code="welcome.heading" /></h2>
         <br />
-        <h5>Hey there! ${username}</h5>
+        <h5><spring:message code="welcome.greeting" />! ${username}</h5>
         <br />
         <a href="/list-todos">Manage your todos</a>
     </div>
