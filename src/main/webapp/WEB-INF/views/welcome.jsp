@@ -14,9 +14,7 @@
 <body>
     <%@ include file="common/navbar.jspf" %>
     <div class="container">
-        <h2 class="text-center mt-5">Welcome Page</h2>
-        <br />
-        <!-- <h4 class="text-center">Welcome ${username}</h4> -->
+        <h2 class="text-center mt-5">Welcome to Todo Application</h2>
         <br />
         <a href="/list-todos">Manage your todos</a>
     </div>
